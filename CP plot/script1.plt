@@ -1,4 +1,5 @@
 set datafile separator ',' #Used for csv files
+set size 1,1 #for proper size
 #File path
 cd 'C:\Users\Arnold\OneDrive - University of Idaho\Documents\UIdaho\Semesters\Semester 3\Env. Degradation of Nuclear Materials\Arnold Lab data\Cyclic Polarization\Plot CP'
 #Title and font
@@ -9,8 +10,8 @@ set title font "Times-Roman,14"
 set format y "%.0E"
 set format x "%.0E"
 #set label and font
-set xlabel "I, A/cm^2" font "Times-Roman, 12"
-set ylabel "Vf, V_{Ag/Agcl}" font "Times-Roman, 12"
+set xlabel "Current Density, A/cm^2" font "Times-Roman, 12"
+set ylabel "Potential, V_{Ag/Agcl}" font "Times-Roman, 12"
 #x axis logscale
 set logscale x 10
 #setting major and minor ticks
@@ -20,5 +21,5 @@ set mytics 4
 set yrange[-6E-1:6E-1]
 set xrange[1E-11:1E0]
 #plotting columns 4 and 5 with color black
-plot "CP1.csv" u 4:5 w lp title "CP1" pt 13 ps 0.1 linecolor rgb "blue"
+plot "CP1.csv" u 4:5 w lp title "CP1" pt 13 ps 0.1 linecolor rgb "blue" #becareful with the file name, double check
 pause -1 "Hit any key to continue" #pauses the plot
